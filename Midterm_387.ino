@@ -86,8 +86,11 @@ void loop(){
                     client.println("<H2><a href=\"/LEDSHORT\"\">Blink LED in SHORT Dash</a><br></H2>"); // makes a clickable link for activating pins            
                     //client.println("<br>"); 
                     client.println("<H2><a href=\"/LEDLONG\"\">Blink LED in LONG Dash</a><br></H2>");
-                    client.println("<br>"); 
                     client.println("<H2><a href=\"/LEDSOS\"\">LED SOS Morse Code</a><br></H2>");
+                    client.println("<br>");
+                    client.println("<H2><a href=\"/LEDON\"\">Turn LED on</a><br></H2>");
+                    client.println("<br>");
+                    client.println("<H2><a href=\"/LEDOFF\"\">Turn LED off</a><br></H2>");
                     client.println("<br>");
                     client.println("<H2><a href=\"/PIEZOBEEP\"\">Make Pizeo Beep</a><br></H2>");
                     
@@ -130,6 +133,14 @@ void loop(){
                         delay(pauseBetweenNotes);
                         noTone(piezo);
                         }
+                    }
+                     if(readString.indexOf("LEDON") > -1) //checks for LEDON 
+                    { 
+                        digitalWrite(led, HIGH); // set pin high 
+                    } 
+                     if(readString.indexOf("LEDOFF") > -1) //checks for LEDON 
+                    { 
+                        digitalWrite(led, LOW); // set pin high 
                     }
                     else{ 
                         if(readString.indexOf("LEDLONG") > -1) 
