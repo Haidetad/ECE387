@@ -30,11 +30,6 @@ int noteLengths[] = {
                      4, 4, 2, 2, 2, 1};
 
 void setup(){
-
-    pinMode(led, OUTPUT); //tests led
-    digitalWrite(led, HIGH);  
-    delay(500); 
-    digitalWrite(led, LOW); 
     
     
     Ethernet.begin(mac, ip, gateway, subnet); 
