@@ -140,7 +140,7 @@ void loop(){
                     } 
                      if(readString.indexOf("LEDOFF") > -1) //checks for LEDON 
                     { 
-                        digitalWrite(led, LOW); // set pin high 
+                        digitalWrite(led, LOW); // set pin low 
                     }
                     else{ 
                         if(readString.indexOf("LEDLONG") > -1) 
