@@ -10,7 +10,7 @@ byte mac[] = { 0xA8, 0x61, 0x0A, 0xAE, 0x0C, 0xA7 }; //Arduino MAC adress
 byte ip[] = { 192, 168, 1, 44 }; //IP adress arduino is set to, same network as router
 byte gateway[] = { 192, 168, 1, 1};  
 byte subnet[] = { 255, 255, 255, 0}; 
-EthernetServer server(80); 
+EthernetServer server(80); //port used to make a web server
 
 String readString; 
 
